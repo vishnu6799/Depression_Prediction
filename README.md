@@ -1,39 +1,50 @@
-# Depression_Prediction
-A survey-based ML project to predict depression likelihood. Built with a scikit-learn preprocessing pipeline and a PyTorch MLP model, deployed via Streamlit. Users can input academic, work, and personal details for predictions, showcasing an end-to-end ML workflow.
+# Depression Prediction using Deep Learning
 
-📌 Problem Statement
+## Overview
 
-Depression is a growing concern, influenced by factors like academic pressure, work pressure, and life satisfaction. Early prediction can raise awareness and encourage timely consultation with professionals.
+This project predicts whether an individual may experience depression based on demographic details, lifestyle habits, academic/work pressure, and mental health history. The solution uses a deep learning-based Multilayer Perceptron (MLP) model to identify depression risk from mental health survey data.
 
-⚙️ Tech Stack
+The project also includes a Streamlit web application for real-time predictions and supports deployment on AWS or Streamlit Cloud.
 
-Python
+---
 
-Scikit-learn → preprocessing pipeline
+## Features
 
-PyTorch → MLP neural network model
+* Data preprocessing pipeline
+* Missing value handling and feature engineering
+* Deep learning classification model using MLP
+* Bias and fairness evaluation across demographic groups
+* Streamlit-based real-time prediction app
+* Deployment-ready architecture
 
-Streamlit → web app deployment
+---
 
-Joblib → save/load preprocessing pipeline
+## Technologies Used
 
-🧑‍💻 Model Training
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Streamlit
+* Joblib
+* AWS / Streamlit Cloud
 
-Features are preprocessed using a ColumnTransformer.
+---
 
-Trained on survey-based dataset with academic, work, and personal life factors.
+## Dataset Features
 
-Model: Multi-Layer Perceptron (MLP) in PyTorch.
+The model uses features such as:
 
-Saved artifacts:
+* Age
+* Gender
+* Sleep Duration
+* Dietary Habits
+* Academic Pressure
+* Work Pressure
+* Job Satisfaction
+* Family History of Mental Illness
+* Suicidal Thoughts
+* CGPA
 
-preprocessor.pkl → preprocessing pipeline
+---
 
-depression_model.pth → trained model
-
-🎯 Features of the App
-
-✅ Collects user input (age, gender, CGPA, academic/work pressure, satisfaction, etc.)
-✅ Handles missing values automatically
-✅ Runs predictions using trained PyTorch MLP model
-✅ Provides an interactive Streamlit interface
